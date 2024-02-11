@@ -1,0 +1,45 @@
+{
+  "name": "bot-tele",
+  "version": "1.0.0",
+  "description": "no",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot-tele"
+  ],
+  "author": "Fadhil Graphy",
+  "license": "ISC",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^7.0.0",
+    "axios": "^1.6.7",
+    "cfonts": "^2.9.3",
+    "chalk": "^4.1.1",
+    "cheerio": "^1.0.0-rc.12",
+    "delay": "latest",
+    "g-i-s": "latest",
+    "moment-timezone": "^0.5.33",
+    "ms": "latest",
+    "nekos.life": "^2.0.7",
+    "nodemon": "^2.0.7",
+    "performance-now": "^2.1.0",
+    "pino": "^6.13.4",
+    "pino-pretty": "^7.3.0",
+    "ra-api": "^1.3.2",
+    "spinnies": "^0.5.1",
+    "telegraf": "^4.3.0",
+    "telegraf-update-logger": "^1.5.0",
+    "util": "latest",
+    "yt-search": "^2.9.0",
+    "ytdl-core": "^4.11.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fdhlgrphy"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
