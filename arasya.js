@@ -727,6 +727,7 @@ switch (command) {
           fdhl.replyWithChatAction("upload_video")
     })
       break
+      
 
     /*
     case 'play':
@@ -768,6 +769,59 @@ console.log(e)
 }
 break
 */
+default:
+  let igdl = `https://www.instagram.com/${q.slice(26)}`
+  if (q.includes(igdl)) {
+    instagram(igdl).then ( data => {
+      for ( let i of data ) {
+        if (i.type === "video") {
+          fdhl.replyWithVideo({
+            url: i.url
+            }).catch(e => { fdhl.reply('Link Invalid')
+            console.log(e)
+            })
+            fdhl.replyWithChatAction("upload_video")
+        } else if (i.type === "image") {
+          fdhl.replyWithPhoto({
+            url: i.url,
+            },{caption: `Follow IG : @arsrfii`})
+        }
+        }
+    } )
+  }
+  let tt3 = `https://vm.tiktok${q.slice(17)}`
+  if (q.includes(tt3)) {
+    TiktokDL(tt3).then ( data => {
+      fdhl.replyWithVideo({
+        url: data.result.video[1]
+        }).catch(e => { fdhl.reply('Link Invalid')
+        console.log(e)
+        })
+        fdhl.replyWithChatAction("upload_video")
+  })
+  }
+  let tt2 = `https://www.tiktok.com/${q.slice(23)}`
+  if (q.includes(tt2)) {
+    TiktokDL(tt2).then ( data => {
+      fdhl.replyWithVideo({
+        url: data.result.video[1]
+        }).catch(e => { fdhl.reply('Link Invalid')
+        console.log(e)
+        })
+        fdhl.replyWithChatAction("upload_video")
+  })
+  }
+  let tt1 = `https://vt.tiktok${q.slice(17)}`
+  if (q.includes(tt1)) {
+    TiktokDL(tt1).then ( data => {
+      fdhl.replyWithVideo({
+        url: data.result.video[1]
+        }).catch(e => { fdhl.reply('Link Invalid')
+        console.log(e)
+        })
+        fdhl.replyWithChatAction("upload_video")
+  })
+  }
 }
 } catch(e) {
 console.log(e)
